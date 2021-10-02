@@ -1,13 +1,12 @@
 console.log("Hello World");
 
 let years = 31;
-console.log( years + " - " + typeof years);
+console.log(years + " - " + typeof years);
 
 const myName = "Andrey";
 console.log(myName + " - " + typeof myName);
 // const myName='vidok_';
 // console.log(myName + " - " + typeof myName);
-
 
 let heWork = true;
 console.log(heWork + " - " + typeof heWork);
@@ -18,7 +17,9 @@ console.log(noThing + " - " + typeof noThing);
 let someThing;
 console.log(someThing + " - " + typeof someThing);
 
-console.log("===================================================================")
+console.log(
+  "==================================================================="
+);
 const dataUser = {
   fullName: "Sereda Andrey Aleksandrovich",
   pressure: "130 / 90",
@@ -29,7 +30,9 @@ console.log(dataUser);
 dataUser.fullName = "xxx";
 console.log(dataUser.fullName);
 
-console.log("===================================================================")
+console.log(
+  "==================================================================="
+);
 
 let dataUser2 = {
   fullName: "Parfilova Nadejda Sergeevna",
@@ -40,13 +43,17 @@ let dataUser2 = {
 console.log(dataUser2);
 dataUser2.pressure = "100 / 90";
 console.log(dataUser2.pressure);
-console.log("===================================================================")
+console.log(
+  "==================================================================="
+);
 
 let id = Symbol("id");
-id.toString
+id.toString;
 console.log(id);
-console.log(id.toString +" - "+ typeof id);
+console.log(id.toString + " - " + typeof id);
 
 const bigint = 1234567890123456789012345678901234567890n;
 console.log(bigint + " - " + typeof bigint);
-console.log("===================================================================")
+console.log(
+  "==================================================================="
+);
