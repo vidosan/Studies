@@ -5,13 +5,14 @@
 // square(8);
 let square = (a) => a ** 2;
 console.log(square(5));
+console.log(`пятью пять ${square(5)} `);
 // Сделайте функцию, которая возвращает сумму двух чисел
 // function sum(a, b) {
 //   return console.log(a + b);
 // }
 // sum(1, 2);
 let sum = (a, b) => a + b;
-console.log(sum(1, 2));
+console.log(`${sum(1, 2)}`);
 // Сделайте функцию, которая отнимает от первого числа второе и делит на третье.
 // function math(a, b, c) {
 //   return console.log((a - b) / c);
@@ -42,10 +43,11 @@ day(3);
 
 // Сделайте функцию, которая параметрами принимает 2 числа. Если эти числа равны - пусть функция вернет true, а если не равны - false.
 
-let truly=(a, b) =>{(a == b)?console.log(true):console.log(false);};
+let truly = (a, b) => {
+  a == b ? console.log(true) : console.log(false);
+};
 
 truly(1, 1);
-
 
 // //  Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма
 // //  больше 10 - пусть вернет true, а если нет то - false.
@@ -87,6 +89,7 @@ truly(1, 1);
 //   for (let i = 0; i < str.length; i++) sum += Number(str[i]);
 //   return sum;
 // };
+// console.log(getDigitsSum(123));
 // getDigitsSum(1623);
 // // Найдите все года от 1 до 2020, сумма цифр которых равна 13.
 // //  Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
@@ -107,3 +110,16 @@ truly(1, 1);
 // console.log(ifEven(98));
 // // Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел.
 // //  Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
+
+// let arr = [11,123,55,1000,5,4,9,1,2, 3, 5, 1];
+// let swapped;
+// for (let i = 0; i < arr.length; i++) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > arr[i + 1]) {
+//       temp = arr[i + 1];
+//       arr[i + 1] = arr[i];
+//       arr[i] = temp;
+//     }
+//   }
+// }
+// console.log(arr);
