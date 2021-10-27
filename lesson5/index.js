@@ -129,26 +129,33 @@ let getDivisors = (x) => {
 };
 getDivisors(555);
 // Дан массив с числами. Выведите последовательно его элементы.
-arr = [1, 2, 3, 4, 5];
-for (i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
-}
+// arr = [1, 2, 3, 4, 5,6];
+// for (i = 0; i < arr.length; i++) {
+//   console.log(arr[i]);
+// }
 // // Дано число. Сложите его цифры. Если сумма получилась более 9-ти,
 // опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
-x = 38497;
-let temp = 0;
-let tempsum = 0;
-let funx=(c)=>{
-for (i = 0; i <2; i++){
-temp = c % 10 
-tempsum += temp;
-c = Math.floor(c / 10);
+chislo = 1234567891;
+let funx = (x) => {
+  let resultat = x;
+  while (resultat > 9) {
+    let temp = 0;
+    let tempsum = 0;
+    x = resultat;
+    dl = String(x).length;
+    console.log(x, dl);
+    for (let i = 0; i < dl; i++) {
+      temp = x % 10;
+      tempsum += temp;
+      x = Math.floor(x / 10);
+    }
+    resultat = tempsum;
+  }
+  return console.log(resultat);
+};
+funx(chislo);
 
-}console.log(c);
-}
-
-funx(x)
- // let arr = [11,123,55,1000,5,4,9,1,2, 3, 5, 1];
+// let arr = [11,123,55,1000,5,4,9,1,2, 3, 5, 1];
 // let swapped;
 // for (let i = 0; i < arr.length; i++) {
 //   for (let i = 0; i < arr.length; i++) {
