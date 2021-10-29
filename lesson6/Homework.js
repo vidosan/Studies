@@ -4,7 +4,7 @@
 
 var str = "Каждый охотник желает знать";
 function stringToarray(str) {
-  console.log(str.split(" "));
+  return console.log(str.split(" "));
 }
 var arr = stringToarray(str);
 // 2. Удаление указанного количества символов из строки
@@ -12,11 +12,11 @@ var arr = stringToarray(str);
 // которая возвращает подстроку, состоящую из указанного количества символов.
 var str = "Каждый охотник желает знать";
 function delete_characters(str, length) {
-  let res = "";
+  let temp = "";
   for (i = 0; i < length; i++) {
-    res += str[i];
+    temp += str[i];
   }
-  console.log(res);
+  return console.log(temp);
 }
 delete_characters(str, 10);
 // 3. Вставить тире между словами строки
@@ -26,7 +26,7 @@ delete_characters(str, 10);
 var str = "HTML JavaScript PHP";
 function insert_dash(str) {
   str = str.replace(/ /gi, "-");
-  console.log(str);
+  return console.log(str);
 }
 insert_dash(str);
 // 4. Сделать первую букву строки прописной
@@ -34,16 +34,15 @@ insert_dash(str);
 //  качестве аргумента и преобразует регистр первого символа строки из нижнего регистра в верхний.
 var str = "string not starting with capital";
 function cursive_letter(str) {
-  let resultat = "";
-  let dl = str.length;
-  for (i = 0; i < dl; i++) {
+  let resultant = "";
+  for (i = 0; i < str.length; i++) {
     if (i == 0) {
-      resultat += str[i].toUpperCase();
+      resultant += str[i].toUpperCase();
       continue;
     }
-    resultat += str[i];
+    resultant += str[i];
   }
-  return resultat;
+  return resultant;
 }
 cursive_letter(str);
 
@@ -52,10 +51,10 @@ cursive_letter(str);
 //  в которой каждое слово начинается с заглавной буквы.
 var str = "каждый охотник желает знать";
 function capitalize(str) {
-  let res = "";
-  str1 = str.split(" ");
-  for (let i = 0; i < str1.length; i++) {
-    res += cursive_letter(str1[i]) + " ";
+  res = "";
+  strArr = str.split(" ");
+  for (let i = 0; i < strArr.length; i++) {
+    res += cursive_letter(strArr[i]) + " ";
   }
   console.log(res);
 }
@@ -69,34 +68,79 @@ capitalize(str);
 var str = "КаЖдЫй ОхОтНиК жЕлАеТ зНаТь";
 function change_register(str) {
   let sumStr = "";
-  let temp
-  for (i = 0; i <  str.length; i++) {
+  let temp;
+  for (i = 0; i < str.length; i++) {
     if (str[i] == str[i].toLowerCase()) {
       temp = str[i].toUpperCase();
     }
     if (str[i] == str[i].toUpperCase()) {
-        temp = str[i].toLowerCase();
+      temp = str[i].toLowerCase();
     }
     sumStr += temp;
   }
-  console.log(sumStr);
+  return console.log(sumStr);
 }
 change_register(str);
 // 7. Удалить все не буквенно-цифровые символы
 // Напишите функцию remove_char(str), которая возвращает строку, очищенную от всех не буквенно-цифровых символов.
+function remove_char(str) {
+  str = str.replace(/[-,.-/#!;:{}$%^&*]/gi, "");
+  str = str.split(" ");
+  let strSum=''
+  console.log(str);
+  for (i = 0; i < str.length; i++) {
+    if (str[i] == "") {
+      str[i].pop;continue;
+    }
+    strSum +=(" "+str[i]);
+  }
+  console.log(strSum);
+}
 
-// var str = "every., -/ hunter #! wishes ;: {} to $ % ^ & * know";
-
-// function remove_char(str) {
-//     ...ваш код...
-// };
+var str = "-e.very., -/ hunter #! wishes ;: {} to $ % ^ & * know";
+arrSim = [
+  ".",
+  ",",
+  "-",
+  "/",
+  "#",
+  "!",
+  ";",
+  ":",
+  "{",
+  "}",
+  "$",
+  "%",
+  "^",
+  "&",
+  "*",
+];
+remove_char(str);
 
 // 8. Нулевое заполнение строки
-// Напишите функцию zeros(num, len), которая дополняет нулями до указаной длины числовое значение с дополнительным знаком «+» или « -« в зависимости от передаваемого аргумента.
-
-// function zeros (num, len, sign) {
-//     ...ваш код...
-// };
+// Напишите функцию zeros(num, len), которая дополняет нулями до указаной длины
+// числовое значение с дополнительным знаком «+» или « -« в зависимости от передаваемого аргумента.
+function zeros(num, len, sign) {
+  let numDl = String(num).length;
+  console.log(len - numDl);
+  if (len - numDl > 0) {
+    for (i = 0; i < len - numDl; i++) {
+      num *= 10;
+    }
+    sign = "+";
+  }
+  if (len - numDl < 0) {
+    for (i = 0; i < numDl - len; i++) {
+      num /= 10;
+    }
+    sign = "-";
+  } else {
+    num;
+    sign = "";
+  }
+  return console.log(num + sign);
+}
+zeros(500, 3);
 
 // 9. Сравнение строк без учёта регистра
 // Напишите функцию comparison(str1, str2), которая сравнивает строки без учёта регистра символов.
